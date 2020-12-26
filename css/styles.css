@@ -2,7 +2,7 @@
 
 .fundo{
   background: rgb(199,209,232);
-background: linear-gradient(90deg, rgba(199,209,232,1) 4%, rgba(196,250,189,0.87718837535014) 100%);
+  background: linear-gradient(90deg, rgba(199,209,232,1) 4%, rgba(196,250,189,0.87718837535014) 100%);
 }
 
 .center {
@@ -12,13 +12,24 @@ background: linear-gradient(90deg, rgba(199,209,232,1) 4%, rgba(196,250,189,0.87
 
 }
 
-
+.jmb {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  
+}
 
 .cidade{
   padding-top: 15px;
+  padding-bottom: 15px;
   text-align: center;
-    color: rgb(59, 57, 57);
-    font-weight: bold;
+  color: rgb(59, 57, 57);
+  font-weight: bold;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 
 .meter{
@@ -40,9 +51,9 @@ background: linear-gradient(90deg, rgba(199,209,232,1) 4%, rgba(196,250,189,0.87
     margin-top: 1px;
     margin-bottom: 1px;
     margin-left: auto;
-    /* padding-left: 20px;
+    padding-left: 20px;
     padding-right: 20px;
-    padding-top: auto; */
+    padding-top: 1px;
     font-size: 48pt;
     }
 
@@ -50,7 +61,10 @@ background: linear-gradient(90deg, rgba(199,209,232,1) 4%, rgba(196,250,189,0.87
     text-align: center;
     color: rgb(59, 57, 57);
     font-weight: bold;
-    padding-top: inherit;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
 
 

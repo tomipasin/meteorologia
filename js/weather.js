@@ -228,7 +228,7 @@ function global() {
                 const d2Tmin = (d2.metric.tempLow)
 
                 const d3 = objH[4];//ontem
-                let horaBRH3 = d1.obsTimeLocal.replace(regexH, '$5/$3/$1');
+                let horaBRH3 = d3.obsTimeLocal.replace(regexH, '$5/$3/$1');
                 const d3Tmax = (d3.metric.tempHigh);
                 const d3Tmin = (d3.metric.tempLow)
 
@@ -349,7 +349,7 @@ function global() {
                 const d2Tmin = (d2.humidityLow)
 
                 const d3 = objH[4];//ontem
-                let horaBRH3 = d1.obsTimeLocal.replace(regexH, '$5/$3/$1');
+                let horaBRH3 = d3.obsTimeLocal.replace(regexH, '$5/$3/$1');
                 const d3Tmax = (d3.humidityHigh);
                 const d3Tmin = (d3.humidityLow)
 
@@ -470,7 +470,7 @@ function global() {
                 const d2Tmin = (d2.metric.windgustAvg)
 
                 const d3 = objH[4];//ontem
-                let horaBRH3 = d1.obsTimeLocal.replace(regexH, '$5/$3/$1');
+                let horaBRH3 = d3.obsTimeLocal.replace(regexH, '$5/$3/$1');
                 const d3Tmax = (d3.metric.windgustHigh);
                 const d3Tmin = (d3.metric.windgustAvg)
 
@@ -590,7 +590,7 @@ function global() {
                 const d2Tmin = (d2.metric.precipRate)
 
                 const d3 = objH[4];//ontem
-                let horaBRH3 = d1.obsTimeLocal.replace(regexH, '$5/$3/$1');
+                let horaBRH3 = d3.obsTimeLocal.replace(regexH, '$5/$3/$1');
                 const d3Tmax = (d3.metric.precipTotal);
                 const d3Tmin = (d3.metric.precipRate)
 
