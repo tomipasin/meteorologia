@@ -5,9 +5,17 @@
 background: linear-gradient(90deg, rgba(199,209,232,1) 4%, rgba(196,250,189,0.87718837535014) 100%);
 }
 
+.center {
+  width: max-content;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+
 
 .cidade{
-  padding-top: 25px;
+  padding-top: 15px;
   text-align: center;
     color: rgb(59, 57, 57);
     font-weight: bold;
@@ -17,7 +25,7 @@ background: linear-gradient(90deg, rgba(199,209,232,1) 4%, rgba(196,250,189,0.87
   text-align: center;
     color: rgb(59, 57, 57);
     font-weight: bold;
-    margin-top: 5px;
+    margin-top: 1px;
     margin-left: 5px;
     padding-left: auto;
     padding-right: 20px;
@@ -30,18 +38,19 @@ background: linear-gradient(90deg, rgba(199,209,232,1) 4%, rgba(196,250,189,0.87
     color: rgb(36, 35, 35);
     font-weight: bold;
     margin-top: 1px;
+    margin-bottom: 1px;
     margin-left: auto;
-    padding-left: 20px;
+    /* padding-left: 20px;
     padding-right: 20px;
-    padding-top: 5px;
-    
-    font-size: 55pt;
+    padding-top: auto; */
+    font-size: 48pt;
     }
 
 .data{
     text-align: center;
     color: rgb(59, 57, 57);
     font-weight: bold;
+    padding-top: inherit;
 }
 
 
@@ -322,4 +331,19 @@ html, body {
   }
   input[disabled] {
     opacity: 0.5;
+  }
+
+  table {
+    border: 1px #c0c0c0 solid;
+    width: 100%;
+  }
+  table th {
+    background-color: rgb(250, 238, 78);
+    color: black;
+    text-align: center;
+  }
+  table td {
+    background-color: #f0f0f0;
+    color: #0c0c0c;
+    text-align: center;
   }
