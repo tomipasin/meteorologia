@@ -12,6 +12,20 @@
 
 }
 
+.aga3{
+  width: max-content;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-weight: bold;
+}
+
+.tabela11{
+margin-bottom: 25px;
+
+}
+
 .jmb {
   margin-top: 10px;
   margin-bottom: 10px;
@@ -350,14 +364,29 @@ html, body {
   table {
     border: 1px #c0c0c0 solid;
     width: 100%;
+    
+   
   }
   table th {
     background-color: rgb(250, 238, 78);
     color: black;
     text-align: center;
+    border-bottom: 1px solid #ddd;
+    border-left: 1px solid #ddd;
   }
   table td {
     background-color: #f0f0f0;
     color: #0c0c0c;
     text-align: center;
+    border-bottom: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+    
+  }
+
+  .table1{
+    background-color: #ac2323;
+    color: #0c0c0c;
+    text-align: center;
+    
+
   }

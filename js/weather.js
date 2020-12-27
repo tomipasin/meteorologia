@@ -10,11 +10,12 @@ function global() {
     let insert = document.querySelector('#inputGroupSelect04');
     let estacao = document.querySelector('.custom-select').value;
 
-    function limpa(){
+    function limpa() {
         let dados = document.getElementById("tempTable");
         dados.innerHTML = ''
     }
-    
+
+  
 
 
     insert.addEventListener('change', function () {
@@ -22,33 +23,33 @@ function global() {
         console.log(estacao)
         limpa()
         atualiza()
-
-            
+      
     })
 
     const tempBotao = document.querySelector('#temp');
-    tempBotao.addEventListener('click', function(){
+    tempBotao.addEventListener('click', function () {
         historicoTemperatura()
     })
 
     const humBotao = document.querySelector('#humidade');
-    humBotao.addEventListener('click', function(){
+    humBotao.addEventListener('click', function () {
         historicoHumidade()
     })
 
     const ventoBotao = document.querySelector('#vento');
-    ventoBotao.addEventListener('click', function(){
+    ventoBotao.addEventListener('click', function () {
         historicoVento()
     })
 
     const chuvaBotao = document.querySelector('#chuva');
-    chuvaBotao.addEventListener('click', function(){
+    chuvaBotao.addEventListener('click', function () {
         historicoChuva()
     })
 
 
     //crio uma função que atualiza a meteorologia:
     function atualiza() {
+        forecast()
         //dou um fecth na API de weather.com e peço os dados da estação IPARA21 no formato JSON, unidades métricas e números com casas deciamis. 
         fetch(`https://api.weather.com/v2/pws/observations/current?stationId=${estacao}&format=json&units=m&apiKey=7df6c3652f1a45ddb6c3652f1a45dd6a&numericPrecision=decimal`)
             //o fetch retorna uma promise, então tenho que usar o then.
@@ -192,7 +193,7 @@ function global() {
     }
 
     atualiza();
-    
+
 
 
 
@@ -251,7 +252,7 @@ function global() {
                 let horaBRH7 = d7.obsTimeLocal.replace(regexH, '$5/$3/$1');
                 const d7Tmax = (d7.metric.tempHigh);
                 const d7Tmin = (d7.metric.tempLow)
-            
+
                 //criação de tabela para os dados
                 //crio o elemento de tabela.
                 let tabela = document.createElement("table");
@@ -266,7 +267,7 @@ function global() {
                 //daí dou um appendchild nessas var na tabela que criei.
                 tabela.appendChild(cabecalho);
                 tabela.appendChild(corpo);
-                
+
                 //agora os dados, que vão 
                 let dados = document.getElementById("tempTable");
                 dados.innerHTML = [
@@ -274,7 +275,7 @@ function global() {
                     `<thead>`,
                     `<tr>`,
                     `<th>Data</th>`,
-                    
+
                     `<th>Min.</th>`,
                     `<th>Max.</th>`,
                     `</tr>`,
@@ -312,8 +313,8 @@ function global() {
                     `</tr>`,
                     `</tbody>`,
                     `</table>`
-                  ].join("\n");
-                
+                ].join("\n");
+
                 //fim tabela dinâmica
 
             })
@@ -372,7 +373,7 @@ function global() {
                 let horaBRH7 = d7.obsTimeLocal.replace(regexH, '$5/$3/$1');
                 const d7Tmax = (d7.humidityHigh);
                 const d7Tmin = (d7.humidityLow)
-            
+
                 //criação de tabela para os dados
                 //crio o elemento de tabela.
                 let tabela = document.createElement("table");
@@ -387,7 +388,7 @@ function global() {
                 //daí dou um appendchild nessas var na tabela que criei.
                 tabela.appendChild(cabecalho);
                 tabela.appendChild(corpo);
-                
+
                 //agora os dados, que vão 
                 let dados = document.getElementById("tempTable");
                 dados.innerHTML = [
@@ -395,7 +396,7 @@ function global() {
                     `<thead>`,
                     `<tr>`,
                     `<th>Data</th>`,
-                    
+
                     `<th>Min.</th>`,
                     `<th>Max.</th>`,
                     `</tr>`,
@@ -433,8 +434,8 @@ function global() {
                     `</tr>`,
                     `</tbody>`,
                     `</table>`
-                  ].join("\n");
-                
+                ].join("\n");
+
                 //fim tabela dinâmica
 
             })
@@ -493,7 +494,7 @@ function global() {
                 let horaBRH7 = d7.obsTimeLocal.replace(regexH, '$5/$3/$1');
                 const d7Tmax = (d7.metric.windgustHigh);
                 const d7Tmin = (d7.metric.windgustAvg)
-            
+
                 //criação de tabela para os dados
                 //crio o elemento de tabela.
                 let tabela = document.createElement("table");
@@ -508,7 +509,7 @@ function global() {
                 //daí dou um appendchild nessas var na tabela que criei.
                 tabela.appendChild(cabecalho);
                 tabela.appendChild(corpo);
-                
+
                 //agora os dados, que vão 
                 let dados = document.getElementById("tempTable");
                 dados.innerHTML = [
@@ -516,7 +517,7 @@ function global() {
                     `<thead>`,
                     `<tr>`,
                     `<th>Data</th>`,
-                    
+
                     `<th>Média Vento</th>`,
                     `<th>Rajada Máxima</th>`,
                     `</tr>`,
@@ -554,8 +555,8 @@ function global() {
                     `</tr>`,
                     `</tbody>`,
                     `</table>`
-                  ].join("\n");
-                
+                ].join("\n");
+
                 //fim tabela dinâmica
 
             })
@@ -613,7 +614,7 @@ function global() {
                 let horaBRH7 = d7.obsTimeLocal.replace(regexH, '$5/$3/$1');
                 const d7Tmax = (d7.metric.precipTotal);
                 const d7Tmin = (d7.metric.precipRate)
-            
+
                 //criação de tabela para os dados
                 //crio o elemento de tabela.
                 let tabela = document.createElement("table");
@@ -628,7 +629,7 @@ function global() {
                 //daí dou um appendchild nessas var na tabela que criei.
                 tabela.appendChild(cabecalho);
                 tabela.appendChild(corpo);
-                
+
                 //agora os dados, que vão 
                 let dados = document.getElementById("tempTable");
                 dados.innerHTML = [
@@ -636,7 +637,7 @@ function global() {
                     `<thead>`,
                     `<tr>`,
                     `<th>Data</th>`,
-                    
+
                     `<th>Taxa Precipitação</th>`,
                     `<th>Precipitação Total</th>`,
                     `</tr>`,
@@ -674,12 +675,151 @@ function global() {
                     `</tr>`,
                     `</tbody>`,
                     `</table>`
-                  ].join("\n");
-                
+                ].join("\n");
+
                 //fim tabela dinâmica
 
             })
     }
+
+
+    function forecast() {
+        
+        fetch(`https://api.weather.com/v3/wx/forecast/daily/5day?geocode=-28.5885157,-51.7942835&format=json&units=m&language=pt-BR&apiKey=7df6c3652f1a45ddb6c3652f1a45dd6a`)
+            
+            .then(resolve => resolve.json())
+            
+            .then(resolve => {
+               
+                const forecast = resolve.daypart[0];
+                console.log(forecast)
+
+                const d1 = forecast.daypartName[0];
+                const d1Forecast = (forecast.narrative[0]);
+
+                const d2 = forecast.daypartName[1];
+                const d2Forecast = (forecast.narrative[1]);
+                
+                const d3 = forecast.daypartName[2];
+                const d3Forecast = (forecast.narrative[2]);
+                
+                const d4 = forecast.daypartName[3];
+                const d4Forecast = (forecast.narrative[3]);
+
+                const d5 = forecast.daypartName[4];
+                const d5Forecast = (forecast.narrative[4]);
+
+                const d6 = forecast.daypartName[5];
+                const d6Forecast = (forecast.narrative[5]);
+
+                const d7 = forecast.daypartName[6];
+                const d7Forecast = (forecast.narrative[6]);
+
+                const d8 = forecast.daypartName[7];
+                const d8Forecast = (forecast.narrative[7]);
+
+                const d9 = forecast.daypartName[8];
+                const d9Forecast = (forecast.narrative[8]);
+
+                const d10 = forecast.daypartName[9];
+                const d10Forecast = (forecast.narrative[9]);
+
+                const d11 = forecast.daypartName[10];
+                const d11Forecast = (forecast.narrative[10]);
+
+                const d12 = forecast.daypartName[11];
+                const d12Forecast = (forecast.narrative[11]);
+
+                //criação de tabela para os dados
+                //crio o elemento de tabela.
+                let tabelaF = document.createElement("table");
+                //insiro a table na div de classe tempTable
+                document.getElementById("forecastTable").appendChild(tabelaF);
+
+                //crio duas var para cabeçalho e para o corpo
+                //e atribuo a elas um create element de thead e tbody.
+                let cabecalho = document.createElement("thead");
+                let corpo = document.createElement("tbody");
+
+                //daí dou um appendchild nessas var na tabela que criei.
+                tabelaF.appendChild(cabecalho);
+                tabelaF.appendChild(corpo);
+
+                //agora os dados, que vão 
+                let dadosF = document.getElementById("forecastTable");
+                dadosF.innerHTML = [
+                    `<table>`,
+                    `<thead>`,
+                    `<tr>`,
+                    `<th>Quando?</th>`,
+                    `<th>Previsão</th>`,
+                    
+                    `</tr>`,
+                    `</thead>`,
+                    `<tbody>`,
+                    `<tr>`,
+                    `<td>${d1}</td>`,
+                    `<td>${d1Forecast}</td>`,
+                    `</tr>`,
+                    `<tr>`,
+                    `<td>${d2}</td>`,
+                    `<td>${d2Forecast}</td>`,
+                    `</tr>`,
+                    `<td>${d3}</td>`,
+                    `<td>${d3Forecast}</td>`,
+                    `</tr>`,
+                    `<td>${d4}</td>`,
+                    `<td>${d4Forecast}</td>`,
+                    `</tr>`,
+                    `<td>${d5}</td>`,
+                    `<td>${d5Forecast}</td>`,
+                    `</tr>`,
+                    `<td>${d6}</td>`,
+                    `<td>${d6Forecast}</td>`,
+                    `</tr>`,
+                    `<td>${d7}</td>`,
+                    `<td>${d7Forecast}</td>`,
+                    `</tr>`,
+                    `<td>${d8}</td>`,
+                    `<td>${d8Forecast}</td>`,
+                    `</tr>`,
+                    `<td>${d9}</td>`,
+                    `<td>${d9Forecast}</td>`,
+                    `</tr>`,
+                    `<td>${d10}</td>`,
+                    `<td>${d10Forecast}</td>`,
+                    `</tr>`,
+                    `<td>${d11}</td>`,
+                    `<td>${d11Forecast}</td>`,
+                    `</tr>`,
+                    `<td>${d12}</td>`,
+                    `<td>${d12Forecast}</td>`,
+                    `</tr>`,
+
+                    
+                    `</tbody>`,
+                    `</table>`
+                ].join("\n");
+
+                //fim tabela dinâmica
+
+
+
+
+
+
+
+
+
+
+
+
+
+            })
+    }
+
+
+
 
 }
 
